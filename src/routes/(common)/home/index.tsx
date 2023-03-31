@@ -1,11 +1,5 @@
-import { $, component$, useStore } from "@builder.io/qwik";
-import {
-  DocumentHead,
-  Link,
-  routeLoader$,
-  server$,
-  useNavigate,
-} from "@builder.io/qwik-city";
+import { component$, useStore } from "@builder.io/qwik";
+import { Link, routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
 import { fetchSimpsons } from "~/api/fetchSimpsons";
 import { IconQuote } from "~/assets/icons/icon-quote";
 import { Container } from "~/components/container/container";
@@ -30,8 +24,6 @@ export const useCharacters = routeLoader$(async () => {
 });
 
 export default component$(() => {
-  const nav = useNavigate();
-
   const selectedCharacter = useStore({
     character: {},
   });
@@ -54,13 +46,13 @@ export default component$(() => {
       .slice(0, 12);
   }
 
-  const handleFromClient = $(() => {
-    console.log("CLIENT");
-  });
+  // const handleFromClient = $(() => {
+  //   console.log("CLIENT");
+  // });
 
-  const handleFromServer = server$(() => {
-    console.log("SERVIDOR");
-  });
+  // const handleFromServer = server$(() => {
+  //   console.log("SERVIDOR");
+  // });
 
   return (
     <Container className="my-8 flex flex-col items-center justify-center gap-8">
