@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-brand: #ffde00;
+  --color-contrast: #ee3133;
+  --color-light: #ffffff;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../src/assets/fonts/Lexend-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../src/assets/fonts/Lexend-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../src/assets/fonts/Lexend-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+p {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 0.8rem;
+}
+
+.grid-page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.grid-container {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  place-items: center;
+  grid-gap: 20px;
+}
+
+@layer components {
+  .btn {
+    @apply bg-white py-0.5 px-5 border border-black text-base hover:bg-[var(--color-contrast)] focus:bg-[var(--color-contrast)] cursor-pointer w-fit;
+  }
+
+  .btn-contrast {
+    @apply bg-[var(--color-contrast)] hover:bg-[var(--color-brand)] focus:bg-[var(--color-brand)];
+  }
+
+  .btn-brand {
+    @apply bg-[var(--color-brand)];
+  }
+
+  .bg-brand {
+    @apply bg-[var(--color-brand)];
+  }
+}
