@@ -10,9 +10,9 @@ export const Footer = component$(() => {
         This app was done by{" "}
         <a
           title="GitHub Simpsons Quote"
-          href="https://github.com/manuelsanchezweb/qwik-curso-01-simpsons-quote"
+          href="https://github.com/manuelsanchezweb/qwik-simpsons-quote-app"
         >
-          Manuel Sánchez
+          manuelsanchezweb
         </a>
       </small>
     </div>
