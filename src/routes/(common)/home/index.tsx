@@ -1,5 +1,11 @@
-import { component$, useStore } from "@builder.io/qwik";
-import { DocumentHead, routeLoader$, useNavigate } from "@builder.io/qwik-city";
+import { $, component$, useStore } from "@builder.io/qwik";
+import {
+  DocumentHead,
+  Link,
+  routeLoader$,
+  server$,
+  useNavigate,
+} from "@builder.io/qwik-city";
 import { fetchSimpsons } from "~/api/fetchSimpsons";
 import { IconQuote } from "~/assets/icons/icon-quote";
 import { Container } from "~/components/container/container";
@@ -47,6 +53,14 @@ export default component$(() => {
       })
       .slice(0, 12);
   }
+
+  const handleFromClient = $(() => {
+    console.log("CLIENT");
+  });
+
+  const handleFromServer = server$(() => {
+    console.log("SERVIDOR");
+  });
 
   return (
     <Container className="my-8 flex flex-col items-center justify-center gap-8">
@@ -98,10 +112,17 @@ export default component$(() => {
         ))}
       </ul>
 
-      {/* <Link class="btn btn-brand">New quotes</Link> */}
-      <button class="btn btn-brand" onClick$={() => nav()}>
+      <Link reload class="btn btn-brand">
         New quotes
+      </Link>
+
+      {/* //// BUTTON DE PRUEBA */}
+      {/* <button class="btn btn-contrast" onClick$={handleFromClient}>
+        Fetch desde el cliente
       </button>
+      <button class="btn btn-contrast" onClick$={handleFromServer}>
+        Fetch desde el servidor
+      </button> */}
     </Container>
   );
 });

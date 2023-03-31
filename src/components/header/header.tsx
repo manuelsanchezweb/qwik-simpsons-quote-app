@@ -21,10 +21,15 @@ export const Header = component$(() => {
             ? menuNav[0].items?.map((item: any) => (
                 <li>
                   <Link
+                    href={item.href}
                     class={`flex scale-100 transition-all hover:scale-125 focus:scale-125" ${
                       location.url.pathname == item.href ? "!font-bold" : ""
                     }`}
-                    href={item.href}
+                    // class={{
+                    //   "flex scale-100 transition-all hover:scale-125 focus:scale-125":
+                    //     true,
+                    //   "font-bold": location.url.pathname == item.href,
+                    // }}
                   >
                     {item.text}
                   </Link>
