@@ -14,7 +14,7 @@ export const Header = component$(() => {
     <div class="bg-brand w-full border border-black">
       <div class="nav flex flex-col md:flex-row gap-6 w-full justify-between items-center p-5 md:px-20 mx-auto max-w-[1400px]">
         <Link href="/home">
-          <Logo className="w-48 h-auto" />
+          <Logo classCustom="w-48 h-auto" />
         </Link>
         <ul class="flex gap-8 ">
           {menuNav

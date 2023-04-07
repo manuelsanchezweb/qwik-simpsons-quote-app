@@ -1,13 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 
 interface LogoProps {
-  className?: string;
+  classCustom?: string;
 }
 
-export const Logo = component$(({ className }: LogoProps) => {
+export const Logo = component$(({ classCustom }: LogoProps) => {
   return (
     <svg
-      class={className}
+      class={classCustom}
       width="727"
       height="308"
       viewBox="0 0 727 308"

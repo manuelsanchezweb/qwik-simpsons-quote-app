@@ -24,7 +24,7 @@ export const useCharacters = routeLoader$(async () => {
 });
 
 export default component$(() => {
-  const selectedCharacter = useSignal();
+  const selectedCharacter = useSignal({});
 
   const { value: characters } = useCharacters();
   const filterCharacters = getDifferentFilteredCharacters(characters);
@@ -51,7 +51,7 @@ export default component$(() => {
   }
 
   return (
-    <Container className="my-8 flex flex-col items-center justify-center gap-8">
+    <Container classCustom="my-8 flex flex-col items-center justify-center gap-8">
       <div class="text-center">
         <h1 class="font-bold text-xl lg:text-5xl">The Simpson Quote App</h1>
         <p>Click on the quote of your favorite character</p>
@@ -73,7 +73,7 @@ export default component$(() => {
                 class="border border-black bg-white absolute right-0 bottom-[19px] cursor-pointer hover:bg-gray-50"
                 aria-label="Open Quote Character"
               >
-                <IconQuote className="max-w-[40px] max-h-[40px]" />
+                <IconQuote classCustom="max-w-[40px] max-h-[40px]" />
               </button>
               <figcaption>{user.character}</figcaption>
             </figure>
@@ -111,7 +111,7 @@ export default component$(() => {
           //       class="border border-black bg-white absolute right-0 bottom-[19px] cursor-pointer hover:bg-gray-50"
           //       aria-label="Open Quote Character"
           //     >
-          //       <IconQuote className="max-w-[40px] max-h-[40px]" />
+          //       <IconQuote classCustom="max-w-[40px] max-h-[40px]" />
           //     </button>
           //     <figcaption>Lisa Simpson</figcaption>
           //   </figure>

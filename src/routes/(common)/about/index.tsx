@@ -3,7 +3,7 @@ import { Container } from "~/components/container/container";
 
 export default component$(() => {
   return (
-    <Container className="my-8 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8">
+    <Container classCustom="my-8 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8">
       <div class="flex flex-col gap-4 text-center lg:text-left">
         <h1 class="font-bold text-xl lg:text-5xl">
           About The Simpsons Quote App
