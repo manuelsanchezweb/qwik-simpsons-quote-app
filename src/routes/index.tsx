@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Link, type DocumentHead } from "@builder.io/qwik-city";
-import { Logo } from "~/assets/icons/logo";
+import { Logo } from "~/components/icons/logo";
 
 export default component$(() => {
   return (
