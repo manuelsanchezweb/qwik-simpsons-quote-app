@@ -4,7 +4,7 @@ import { Logo } from "~/components/icons/logo";
 
 export default component$(() => {
   return (
-    <div class="flex flex-col items-center justify-center min-h-screen py-2 bg-brand">
+    <div class="flex flex-col items-center justify-center text-center min-h-screen p-4 bg-brand">
       <Logo className="w-64 sm:w-[35rem]" />
       <h1 class="font-medium text-xl my-1">
         Discover some of the most amazing Quotes from The Simpsons
