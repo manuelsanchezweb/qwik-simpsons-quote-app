@@ -8,10 +8,8 @@ export const Header = component$(() => {
   const { menu } = useContent();
   const menuNav = menu?.items?.map((item: any) => item);
 
-  // @TODO: reload en links y active en link
-
   return (
-    <div class="bg-brand w-full border border-black">
+    <header class="bg-brand w-full border border-black">
       <div class="nav flex flex-col md:flex-row gap-6 w-full justify-between items-center p-5 md:px-20 mx-auto max-w-[1400px]">
         <Link href="/home">
           <Logo classCustom="w-48 h-auto" />
@@ -41,6 +39,6 @@ export const Header = component$(() => {
           </Link>
         </ul>
       </div>
-    </div>
+    </header>
   );
 });

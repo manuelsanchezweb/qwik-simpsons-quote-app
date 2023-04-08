@@ -3,13 +3,7 @@ import { Link, routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
 import { fetchSimpsons } from "~/api/fetchSimpsons";
 import { Container } from "~/components/container/container";
 import { IconQuote } from "~/components/icons/icon-quote";
-
-interface Character {
-  characterDirection?: string;
-  character?: string;
-  image?: string;
-  quote?: string;
-}
+import type { Character } from "~/types/types";
 
 export const useCharacters = routeLoader$(async () => {
   try {
@@ -28,8 +22,8 @@ export default component$(() => {
 
   const { value: characters } = useCharacters();
   const filterCharacters = getDifferentFilteredCharacters(characters);
-  // console.log(filterCharacters);
 
+  // For debugging purposes, you can use the useVisibleTask$ hook to track changes
   // useVisibleTask$(({ track }) => {
   //   track(selectedCharacter);
   //   console.log("selectedCharacter", selectedCharacter.value);
