@@ -42,7 +42,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "This is an unofficial APP (even though it looks so cool)!",
     },
   ],
 };

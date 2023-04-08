@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import type { DocumentHead } from "@builder.io/qwik-city";
 import { Container } from "~/components/container/container";
 
 export default component$(() => {
@@ -50,3 +51,14 @@ export default component$(() => {
     </Container>
   );
 });
+
+export const head: DocumentHead = {
+  title: "About - The Simpsons - Quotes",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover why we decided to create this app in the about section!",
+    },
+  ],
+};
