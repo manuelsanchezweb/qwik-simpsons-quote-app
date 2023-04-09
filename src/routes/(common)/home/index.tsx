@@ -108,5 +108,33 @@ export const head: DocumentHead = {
       name: "description",
       content: "Enjoy the app with the best quotes from The Simpsons!",
     },
+    {
+      name: "keywords",
+      content: "simpsons, app, quotes",
+    },
+    {
+      name: "author",
+      content: "manuelsanchezweb",
+    },
+    {
+      name: "og:image",
+      content: "https://qwik-simpsons.vercel.app/img/thumbnail.png",
+    },
+    {
+      name: "twitter:image",
+      content: "https://qwik-simpsons.vercel.app/img/thumbnail.png",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Home - The Simpsons - Quotes",
+    },
+    {
+      name: "twitter:description",
+      content: "Enjoy the app with the best quotes from The Simpsons!",
+    },
   ],
 };

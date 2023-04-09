@@ -60,5 +60,34 @@ export const head: DocumentHead = {
       content:
         "Discover why we decided to create this app in the about section!",
     },
+    {
+      name: "keywords",
+      content: "simpsons, quotes, fun",
+    },
+    {
+      name: "author",
+      content: "manuelsanchezweb",
+    },
+    {
+      name: "og:image",
+      content: "https://qwik-simpsons.vercel.app/img/thumbnail.png",
+    },
+    {
+      name: "twitter:image",
+      content: "https://qwik-simpsons.vercel.app/img/thumbnail.png",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "About - The Simpsons - Quotes",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Discover why we decided to create this app in the about section!",
+    },
   ],
 };
